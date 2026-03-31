@@ -1,0 +1,21 @@
+image_size: 128
+patch_size: 8
+embed_dim: 128
+num_heads: 4
+num_layers: 4
+dropout: 0.3
+proj_dim: 128
+
+vocab_size: 5000
+max_seq_len: 32
+
+batch_size: 64
+epochs: 20
+lr: 1.0e-4
+weight_decay: 1.0e-2  # L2 regularisation
+momentum: 0.9         # AdamW beta1 (gradient momentum)
+temperature: 0.07
+grad_clip: 1.0
+
+data_dir: ./data
+num_images: 5000
