@@ -8,6 +8,8 @@ Trains a **VisionTransformer** and a **TextTransformer** jointly with an **InfoN
 
 After training the model supports **zero-shot classification**: encode an image and a set of text prompts, pick the prompt with the highest cosine similarity.
 
+Results are presented in the provided Jupyter notebook named demo.
+
 ## Project structure
 
 ```
