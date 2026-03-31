@@ -116,9 +116,11 @@ Edit `config.yaml` to change any hyperparameter:
 
 | Key | Default | Description |
 |---|---|---|
-| `image_size` | 64 | Input resolution (increase for quality, slower) |
+| `image_size` | 128 | Input resolution (increase for quality, slower) |
+| `patch_size` | 8 | Image is divided into (image_size / patch_size)² non-overlapping patches |
 | `embed_dim` | 128 | Transformer hidden dimension |
 | `proj_dim` | 128 | Shared embedding space dimension |
 | `temperature` | 0.07 | InfoNCE temperature (learnable) |
-| `epochs` | 30 | Training epochs |
-| `num_images` | 1000 | Images to download |
+| `batch_size` | 64 | Number of image-caption pairs per training step. Also determines the number of negatives available for the contrastive loss — each sample is compared against batch_size - 1 non-matching pairs. |
+| `epochs` | 20 | Training epochs |
+| `num_images` | 5000 | Images to download |
